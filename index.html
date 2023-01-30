@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Encriptador de Texto</title>
+    <link rel="shortcut icon" href="img/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="logo-wellcome">
+            <div class="logo">
+                <img class="logo-img" src="img/logo_alura_lightred.png" alt="imagen de logo">
+                <img class="title-img" src="img/logo_tittle_lighred.png" alt="título de página">
+            </div>
+            <div class="wellcome">
+                <p id="bienvenido"></p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="container">
+
+            <div class="resume">
+                <p class="text-resume">El programa encripta y desencripta (<em>previamente cifrados aquí</em>), textos y/o mensajes, haciéndelo más privado.</p>
+            </div>
+
+            <div class="textarea-container">
+                <div class="left">
+                    <div class="textarea-left">
+                        <textarea name="" id="textarea1" class="text-area1" onClick="this.select();" spellcheck="false" placeholder="Escriba su texto aquí"></textarea>
+                    </div>
+                </div>
+                
+                <!--Area de texto derecho-->
+                <div class="right">
+                    <div id="textareaID" class="right-container">
+                        <div  class="textarea-right">
+                            <textarea name="" id="textarea2" class="text-area2" cols="30" rows="10" readonly placeholder="NINGÚN TEXTO INGRESADO..."></textarea>
+                            <div class="copy">
+                                <button type="button" class="button-copy" onselectstart="return false" onclick="copiar()">Copiar</button>
+                            </div>                        
+                        </div>
+                    </div>                    
+                    
+                    <!--Area de texto derecho - Instrucciones-->
+                    <div id="instructionsID" class="instructions">
+                        <h3>NINGÚN MENSAJE ENCONTRADO</h3>                        
+                        <div class="text-instruction">
+                            <div class="inst-left">
+                                <p>Intrucciones:</p>
+                                <ol>                                
+                                    <li><b>Solo se permiten en minúsculas y sin acento.</b></li>
+                                    <li>Ingrese un texto o mensaje para encriptar o desencriptar.</li>
+                                    <li>Use los botones de <u><em>Encriptar</em></u> y <u><em>Desencriptar</em></u>, para su respectivo cifrado.</li>
+                                    <li>El boton <u><em>Copiar</em></u>, tiene la función de cortar.</li>
+                                    <li>Se implementó el botón de <u><em>Reset</em></u>, su función es la de refrescar o actualizar la página.</li>
+                                </ol>
+                            </div>
+                            <div class="img-rigt">
+                                <img class="munheco-img" src="img/munheco-only.png" alt="img_buscando">
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <div class="left-button">
+                    <div class="encrypt-decrypt">
+                        <button type="button" id="btn" class="btn-encrypt" onselectstart="return false" onclick="encriptar()">Encriptar</button>
+                        <button type="button" id="btn" class="btn-decrypt" onselectstart="return false" onclick="desencriptar()">Desencriptar</button>
+                    </div>
+                </div>                          
+            </div>
+        </div>
+
+        <div class="buton-reset">
+            <button id="reset" class="btn-reset" onclick="refreshPage()">Reset</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container-footer">
+
+            <div class="social-network">
+                <p>Visitame en mis redes</p>
+                <div class="icon-network">
+                    <a href="https://github.com/franksgonzales" target="_blank"><img class="github-img" src="img/github.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/franks-gonzales141" target="_blank"><img class="linkedin-img" src="img/linkedin.png" alt="Linkedin"></a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="footer">
+                <div class="resume-footer">                    
+                    <div class="gratitude">
+                        <div class="text-resume2">
+                            <h5><u>ENCRIPTADOR DE TEXTO</u></h5>
+                            <p>Gracias al curso de <em>Programación</em> y al <em>Challenge</em> de <b>ORACLE + Alura</b>, se desarrollo este programa de <em>encriptación de texto</em>.</p>
+                            <p>Encriptador_Texto_v.2.0.141.b</p>
+                        </div>                        
+                    </div>     
+                    
+                    <div class="img-resume">
+                        <div class="alura-img">
+                            <img class="alura-letter" src="img/alura-letter.png" alt="logo_alura">
+                        </div>                        
+                    </div>
+    
+                    <div class="web-page">
+                        <div class="webs">
+                            <h5><u>Páginas web</u></h5>
+                            <a href="https://www.oracle.com/pe/education/oracle-next-education/" target="_blank">ONE - Oracle Next Education</a>
+                            <br>
+                            <a href="https://www.aluracursos.com/" target="_blank">Alura Latam</a>
+                        </div>
+                    </div>     
+                    
+                </div>                           
+            </div>
+        </div>
+
+        <div class="container-copyright">
+            <div class="copyright">
+                <p>Copyright &copy; 2023 Encriptador de Texto. /<em>Desarrollado por</em> Franks Gonzales/ - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+        
+    <script src="js/main.js"></script>
+</body>    
+</html>

@@ -1,0 +1,829 @@
+/*contenido general*/
+*{
+    font-family: 'Titillium Web', sans-serif;
+    box-sizing: border-box;
+}
+
+/*Cambia el color de selección de texto*/
+::selection {
+    color: #FFFFFF;
+    background: #DE272C;
+}
+
+/*cuerpo pagina*/
+body{
+    margin: 0;
+    padding: 0;
+    background: #F3F3F3;
+}
+
+/*Cabeza de pagína*/
+header{
+    display: block;
+    width: 100%;
+    height: 100px;    
+}
+
+.logo-wellcome{
+    display: flex;
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding: 20px 10px 10px 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*logo de la pagina*/
+.logo{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+
+.logo-img{
+    width: 55px;
+}
+
+.title-img{
+    margin-left: 5px;
+    width: 230px;
+    height: 55px;
+}
+
+/*da bienvenida al usuario*/
+.wellcome{
+    display: flex;
+    width: 50%;
+    justify-content: right;
+    background: #F3F3F3;
+}
+
+#bienvenido{
+    font-size: 16px;
+    color: #525152;
+}
+
+/*documento principal de la pagina*/
+main{
+    display: block;
+    width: 100%;
+    height: 500px;
+}
+
+#container{
+    display: block;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 10px 10px 10px;
+}
+
+/*pequeña introduccion del programa*/
+.resume{
+    display: block;
+    width: 100%;
+}
+
+.text-resume{
+    font-size: 15px;
+}
+
+/*contenedor del area de texo*/
+.textarea-container{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    padding: 10px 50px 10px 50px;
+    justify-content: space-between;
+}
+
+/*area de texto izquierdo*/
+.left{
+    display: flex;
+    width: 60%;
+    height: 100%;
+    padding: 10px;
+    margin-right: 60px;
+}
+
+.textarea-left{
+    text-align: left;
+    width: 100%;
+}
+
+.text-area1{
+    width: 80%;
+    height: 100%;
+    font-size: 18px;
+    padding: 15px;
+    border: 1px solid rgba(178, 178, 178, 0.7);
+    border-radius: 10px;
+    resize: none;
+    outline: none;
+}
+
+/*area de texto derecho*/
+.right{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    padding: 10px;
+}
+
+.right-container{
+    display: none;
+    width: 100%;
+}
+
+.textarea-right{
+    display: block;
+    width: 100%;
+    text-align: right;
+    justify-content: center;    
+}
+
+.text-area2{
+    width: 100%;
+    height: 85%;
+    font-size: 18px;
+    text-align: center;
+    color: #525152;
+    padding: 15px;
+    border: 1px solid rgba(178, 178, 178, 0.7);
+    border-radius: 10px;
+    resize: none;
+    outline: none;
+}
+
+
+/*area del boton de copiar*/
+.copy{
+    width: 100%;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.button-copy{
+    font-size: 18px;
+    color: #525152;
+    padding: 1px 10px 1px 10px;
+    border: 1px solid #525152;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+    transition: all 500ms;
+}
+
+.button-copy:hover{
+    color: #F3F3F3;
+    font-weight: bold;
+    background: #525152;
+    transition: all 500ms;
+    
+}
+
+.button-copy:active{
+    background: #525152;
+    box-shadow: 0 5px #666;
+    transform: translateY(2px);
+    transition: all 500ms;
+}
+
+/*area de texto derecho - imagen e instrucciones - este se ocultara al dar clic el boton de entiptar o desencriptar*/
+.instructions{
+    display: inline-block;
+    width: 100%;
+    height: 125%;
+    border: 1px solid rgba(178, 178, 178, 0.7);
+    border-radius: 10px;
+    background: rgba(178, 178, 178, 0.2);
+    padding: 5px;
+}
+
+.instructions h3{
+    display: flex;
+    width: 100%;
+    font-size: 1.83vw;
+    margin: 5px;
+    text-align: center;
+    color: #A71C1E;
+}
+
+.text-instruction{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: #525152;
+    transition: all 400ms;
+}
+
+.text-instruction:hover{
+    color: #000000;
+    transition: all 400ms;
+}
+
+.inst-left{
+    width: 50%;
+}
+
+.inst-left p{
+    font-size: 1.3vw;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.inst-left ol{
+    display: block;
+    font-size: 1vw;
+    padding-left: 20px;
+}
+
+.inst-left li{
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.img-rigt{
+    width: 50%;
+}
+
+.munheco-img{
+    float: right;
+    width: 100%;
+    text-align: right;
+    opacity: 80%;
+}
+
+/*Seccion de botones*/
+.button-container{
+    display: block;
+    width: 100%;
+}
+
+.left-button{
+    width: 50%;
+}
+
+.encrypt-decrypt{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+#btn{
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #A71C1E;
+    border-radius: 10px;    
+    cursor: pointer;
+}
+
+.btn-encrypt{
+    float: left;
+    margin-right: 50px;
+    color: #DE272C;
+    background: #F3F3F3;
+    transition: 1s;
+}
+
+.btn-encrypt:hover{
+    transform: scale(1.2);
+    box-shadow: 5px 5px 4px #525152;
+    color: #F3F3F3;
+    background: #DE272C;
+    transition: 600ms;
+}
+
+.btn-decrypt{
+    float: right;
+    margin-left: 50px;
+    color: #DE272C;
+    background: #F3F3F3;
+    transition: 1s;    
+}
+
+.btn-decrypt:hover{
+    transform: scale(1.2);
+    box-shadow: 5px 5px 4px #525152;
+    color: #F3F3F3;
+    background: #DE272C;
+    transition: 600ms;
+}
+
+/*boton de refrescar pagina*/
+.buton-reset{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.btn-reset{
+    display: block;
+    font-size: 16px;    
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    padding: 20px 12px;
+    color: #F3F3F3;
+    border-radius: 50px;
+    background: #DE272C;
+    transform: translateX(50px);
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.btn-reset:hover{
+    font-size: 18px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+    transform: translate(0px);
+    transition: all 500ms;
+}
+
+.btn-reset:active{
+    box-shadow: none;
+    transform: translateY(2px);
+    transition: all 200ms;
+}
+
+/*pie de pagina*/
+footer{
+    display: block;
+    width: 100%;
+    margin-top: 300px;
+}
+
+.container-footer{
+    display: block;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 10px 10px 10px;
+    background: #DE272C;
+}
+
+.social-network{
+    display: block;
+    width: 100%;    
+}
+
+.social-network p{
+    width: 100%;
+    font-size: 26px;
+    font-weight: bold;
+    color: #F3F3F3;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.icon-network{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.github-img{
+    display: flex;
+    width: 80px;
+    margin-right: 25px;
+    padding: 10px;
+    opacity: 70%;
+    transition: all 500ms;
+}
+
+.github-img:hover{
+    opacity: 100%;
+    transition: all 500ms;
+}
+
+.linkedin-img{
+    display: flex;
+    width: 80px;
+    margin-left: 25px;
+    padding: 10px;
+    opacity: 70%;
+    transition: all 500ms;
+}
+
+.linkedin-img:hover{
+    opacity: 100%;
+    transition: all 500ms;
+}
+
+.footer{
+    display: flex;
+    width: 100%;
+    color: #F3F3F3;
+}
+
+/*2º seccion de pie de pagina*/
+.resume-footer{
+    display: flex;
+    width: 100%;
+}
+
+/* A */
+.gratitude{
+    display: flex;
+    width: 40%;
+}
+
+.text-resume2{
+    width: 100%;
+    justify-content: right;
+    text-align: justify;
+    padding: 5px;
+    margin-left: 10%;
+    margin-right: 20%;
+}
+
+.text-resume2 h5{
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.text-resume2 p{
+    font-size: 14px;
+}
+
+/* B */
+.img-resume{
+    display: flex;
+    width: 20%;
+}
+
+.alura-img{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img-resume img{
+    width: 80px;
+}
+
+/* C */
+.web-page{
+    display: flex;
+    width: 40%;
+}
+
+.webs{
+    width: 100%;
+    justify-content: right;
+    text-align: justify;
+    padding: 5px;
+    margin-left: 20%;
+    margin-right: 10%;
+}
+
+.webs h5{
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.webs a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #F3F3F3;
+}
+
+.webs a:hover{
+    font-weight: bold;
+}
+
+/*area del copyright*/
+.container-copyright{
+    display: flex;
+    width: 100%;
+    color: #F3F3F3;
+    background: #000000;
+}
+
+.copyright{
+    width: 100%;
+}
+
+.copyright p{
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 767px ) {
+
+    /*----------Header----------*/
+
+    header{
+        height: 60px;    
+    }
+
+    .logo-wellcome{
+        width: 100%;
+    }
+
+    .logo{
+        width: 20%;
+    }
+
+    .logo-img{
+        width: 30px;
+    }    
+
+    .title-img{
+        display: none;
+    }   
+    
+    .wellcome{
+        width: 80%;
+    }
+
+    #bienvenido{
+        font-size: 14px;
+    }
+
+    /*----------Main----------*/
+
+    #container{
+        width: 100%;
+        padding: 5px;
+    }
+
+    .resume{
+        margin-top: 20px;
+    }
+
+    .text-resume{
+        margin: 0%;
+        font-size: 14px;
+    }
+   
+    /*area de texto*/
+    .textarea-container{
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    .left{
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        margin-right: 0;
+    }
+
+    .text-area1{
+        width: 100%;
+        height: 200px;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .right{
+        display: block;
+        width: 100%;
+    }
+
+    .text-area2{
+        width: 100%;
+        height: 200px;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .copy{
+        padding-top: 5px;
+    }
+
+    .button-copy{
+        font-size: 16px;
+    }
+
+    /*Istrucciones*/
+
+    .instructions{
+        height: 100%;
+    }
+
+    .instructions h3{
+        display: block;
+        font-size: 5vw;
+    }
+
+    .inst-left{
+        width: 100%;
+        padding-right: 10px;
+    }
+
+    .inst-left p{
+        font-size: 4vw;
+    }
+
+    .inst-left ol{
+        font-size: 3vw;
+    }
+
+    .img-rigt{
+        display: none;
+    }
+
+    /*Botones*/
+
+    .left-button{
+        width: 100%;
+    }
+
+    .encrypt-decrypt{
+        padding: 30px;
+    }
+
+    #btn{
+        min-width: 130px;
+        padding: 5px 20px;
+        font-size: 16px;
+    }
+
+    .btn-encrypt{
+        margin-right: 20px;
+        transition: all 500ms;
+    }
+
+    .btn-encrypt:hover{
+        transform: scale(1);
+        box-shadow: none;
+        color: #DE272C;
+        background: #F3F3F3;
+        transition: all 2s;
+    }
+
+    .btn-encrypt:active{
+        transform: scale(1);
+        box-shadow: 5px 5px 4px #525152;
+        color: #F3F3F3;
+        background: #DE272C;
+        transition: all 500ms;
+    }
+
+    .btn-decrypt{
+        margin-left: 20px;
+        transition: all 500ms;
+    }
+
+    .btn-decrypt:hover{
+        transform: scale(1);
+        box-shadow: none;
+        color: #DE272C;
+        background: #F3F3F3;
+        transition: all 2s;
+    }
+
+    .btn-decrypt:active{
+        transform: scale(1);
+        box-shadow: 5px 5px 4px #525152;
+        color: #F3F3F3;
+        background: #DE272C;
+        transition: all 500ms;
+    }
+
+    .buton-reset{
+        bottom: 30px;
+        right: 0px;
+        transform: rotate(270deg);
+    }
+
+    .btn-reset{
+        font-size: 16px;
+        font-weight: lighter;
+        padding: 3px 5px;       
+        border: 1px solid #F3F3F3;
+        border-radius: 5px;
+        transform: translateY(10px);
+    }
+    
+    .btn-reset:hover{
+        font-size: 16px;
+        box-shadow: none;
+        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+
+    .btn-reset:active{
+        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+
+    /*pie de pagina*/
+    footer{
+        margin-top: 400px;
+    }
+
+    .container-footer{
+        width: 100%;
+    }
+
+    .social-network p{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .github-img{
+        width: 60px;
+        margin-right: 15px;
+        padding: 7px;
+        opacity: 100%;
+    }
+
+    .github-img:active{
+        opacity: 70%;
+        transform: scale(0.8);
+        transition: 500ms;
+    }
+
+    .linkedin-img{
+        width: 60px;
+        margin-left: 15px;
+        padding: 7px;
+        opacity: 100%;
+    }
+
+    .linkedin-img:active{
+        opacity: 70%;
+        transform: scale(0.8);
+        transition: 500ms;
+    }
+    
+    .text-resume2{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    /* -A- */
+    .gratitude{
+        width: 50%;
+    }
+    
+    .text-resume2 h5{
+        font-size: 11px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    
+    .text-resume2 p{
+        font-size: 10px;
+    }
+
+    /* -B- */
+    .img-resume{
+        display: none;
+    }
+
+    /* C */
+    .web-page{
+        width: 50%;
+    }
+
+    .webs{
+        text-align: right;
+        margin-left: 10%;
+        margin-right: 5%;
+    }
+
+    .webs h5{
+        font-size: 11px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .webs a{
+        font-size: 10px;
+        text-decoration: none;
+        color: #F3F3F3;
+    }
+
+    .webs a:hover{
+        font-weight: normal;
+    }
+
+    /*area del copyright*/
+    .container-copyright{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .copyright p{
+        font-size: 8px;
+    }
+    
+
+}
+
